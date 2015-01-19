@@ -1,3 +1,5 @@
+require 'harvested'
+
 module StoryTime
   TimeTracker = Harvest.hardy_client(subdomain: ENV['HARVEST_SUBDOMAIN'],
                                      username: ENV['HARVEST_USERNAME'],
