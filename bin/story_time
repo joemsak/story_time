@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'story_time'
+
+StoryTime.sync
