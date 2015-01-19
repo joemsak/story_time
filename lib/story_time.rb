@@ -1,10 +1,9 @@
 require "story_time/version"
 require "story_time/track_time_on_stories"
+require "story_time/time_tracker"
+require "story_time/story"
 
 module StoryTime
-  TimeTracker = time_tracker_client
-  Story = ticket_tracker_story
-
   initialize_ticket_token
 
   def self.sync
@@ -20,9 +19,6 @@ module StoryTime
   end
 
   def self.time_tracker_client
-    Harvest.hardy_client(subdomain: ENV['HARVEST_SUBDOMAIN'],
-                         username: ENV['HARVEST_USERNAME'],
-                         password: ENV['HARVEST_PASSWORD'])
   end
 
   def self.initialize_ticket_token
