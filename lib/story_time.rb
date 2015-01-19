@@ -1,3 +1,5 @@
+require 'dotenv'
+
 require "story_time/version"
 require "story_time/track_time_on_stories"
 require "story_time/time_tracker"
