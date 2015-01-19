@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'dotenv'
-require 'story_time'
-
 Dotenv.load
+
+require 'story_time'
 StoryTime.sync
