@@ -5,4 +5,10 @@ begin
   RSpec::Core::RakeTask.new(:spec)
 rescue LoadError
 end
+
 task default: :spec
+
+task :sync do
+  require 'story_time'
+  StoryTime.sync
+end
