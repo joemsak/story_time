@@ -1,7 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'dotenv'
-Dotenv.load
+begin
+  require 'dotenv'
+  Dotenv.load
+rescue
+  $stdout.puts 'Could not load Dotenv. This is not a problem in production.'
+end
 
 require 'story_time'
 StoryTime.sync
