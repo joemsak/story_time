@@ -3,8 +3,9 @@
 begin
   require 'dotenv'
   Dotenv.load
-rescue
-  $stdout.puts 'Could not load Dotenv. This is not a problem in production.'
+rescue => e
+  $stdout.puts e.message
+  $stdout.puts 'This is not a problem in production.'
 end
 
 require 'story_time'
