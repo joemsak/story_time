@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
 
-begin
+unless 'production' == ENV['RACK_ENV']
   require 'dotenv'
   Dotenv.load
-rescue => e
-  $stdout.puts e.message
-  $stdout.puts 'This is not a problem in production.'
 end
 
 require 'story_time'
