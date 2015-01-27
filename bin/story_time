@@ -1,12 +1,2 @@
 #!/usr/bin/env ruby
 
-begin
-  require 'dotenv'
-  Dotenv.load
-rescue => e
-  $stdout.puts e.message
-  $stdout.puts 'This is not a problem in production.'
-end
-
-require 'story_time'
-StoryTime.sync
